@@ -24,7 +24,6 @@ const Home = () => {
       });
   }, []);
 
-  // Auto-slide every 5 seconds
   useEffect(() => {
     if (latestVehicles.length === 0) return;
     const interval = setInterval(() => {
@@ -49,7 +48,7 @@ const Home = () => {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[600px] flex items-center justify-center overflow-hidden">
-        {/* Background Carousel */}
+
         {latestVehicles.length > 0 && (
           <AnimatePresence mode="wait">
             <motion.div
@@ -73,7 +72,6 @@ const Home = () => {
           </AnimatePresence>
         )}
 
-        {/* Hero Text */}
         <div className="relative z-10 max-w-4xl px-4 sm:px-6 md:px-8 text-center">
           <motion.div
             key={`content-${currentIndex}`}
@@ -115,7 +113,6 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* Navigation Arrows */}
         {latestVehicles.length > 1 && (
           <>
             <button
@@ -158,7 +155,6 @@ const Home = () => {
               </svg>
             </button>
 
-            {/* Dots Indicator */}
             <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-1.5 sm:gap-2">
               {latestVehicles.map((_, index) => (
                 <button

@@ -35,7 +35,6 @@ const Login = () => {
     }
   };
 
-  // 🆕 Open Gmail when "Forgot Password?" is clicked
   const handleForgotPassword = () => {
     window.open('https://mail.google.com/', '_blank');
   };

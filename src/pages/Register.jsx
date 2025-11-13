@@ -34,7 +34,7 @@ const Register = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-    // Clear error for this field
+
     if (errors[e.target.name]) {
       setErrors({
         ...errors,
@@ -46,7 +46,6 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Validate password
     const passwordErrors = validatePassword(formData.password);
     if (passwordErrors.length > 0) {
       setErrors({ password: passwordErrors.join('. ') });

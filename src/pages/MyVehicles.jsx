@@ -58,7 +58,7 @@ const MyVehicles = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Header */}
+
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary">
               My <span className="text-primary">Vehicles</span>
@@ -71,7 +71,6 @@ const MyVehicles = () => {
             </Link>
           </div>
 
-          {/* Empty State */}
           {vehicles.length === 0 ? (
             <div className="text-center py-12 sm:py-16 md:py-20">
               <svg className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,7 +95,6 @@ const MyVehicles = () => {
                   className="bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-primary transition"
                 >
                   <div className="flex flex-col md:flex-row">
-                    {/* Vehicle Image */}
                     <div className="w-full md:w-1/3 h-48 sm:h-56 md:h-auto">
                       <img
                         src={vehicle.coverImage}
@@ -105,16 +103,13 @@ const MyVehicles = () => {
                       />
                     </div>
 
-                    {/* Vehicle Info */}
                     <div className="flex-1 p-4 sm:p-6">
-                      {/* Header Section */}
                       <div className="flex flex-col sm:flex-row justify-between items-start gap-3 sm:gap-4 mb-4">
                         <div className="flex-1">
                           <h3 className="text-xl sm:text-2xl font-bold text-secondary mb-2">
                             {vehicle.vehicleName}
                           </h3>
                           
-                          {/* Badges - Stacked on mobile */}
                           <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-400">
                             <span className="flex items-center">
                               <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
@@ -135,7 +130,6 @@ const MyVehicles = () => {
                           </div>
                         </div>
 
-                        {/* Price */}
                         <div className="text-left sm:text-right">
                           <p className="text-xl sm:text-2xl font-bold text-primary">
                             ${vehicle.pricePerDay}
@@ -144,12 +138,9 @@ const MyVehicles = () => {
                         </div>
                       </div>
 
-                      {/* Description */}
                       <p className="text-gray-400 text-sm sm:text-base mb-4 sm:mb-6 line-clamp-2">
                         {vehicle.description}
                       </p>
-
-                      {/* Action Buttons */}
                       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                         <Link
                           to={`/vehicle/${vehicle._id}`}
@@ -179,7 +170,6 @@ const MyVehicles = () => {
         </motion.div>
       </div>
 
-      {/* Delete Confirmation Modal */}
       {deleteModal.show && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <motion.div

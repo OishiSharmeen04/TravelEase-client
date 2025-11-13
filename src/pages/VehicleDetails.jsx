@@ -15,7 +15,6 @@ const VehicleDetails = () => {
   const [booked, setBooked] = useState(false);
 
   useEffect(() => {
-    // Fetch vehicle details
     get(`/vehicles/${id}`)
       .then(data => {
         setVehicle(data);
@@ -27,7 +26,6 @@ const VehicleDetails = () => {
         setLoading(false);
       });
 
-    // Check if the user already booked this vehicle
     if (user?.email) {
       get(`/my-bookings/${user.email}`)
         .then(data => {
@@ -89,7 +87,6 @@ const VehicleDetails = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Image */}
             <div className="relative h-96 lg:h-full rounded-lg overflow-hidden">
               <img
                 src={vehicle.coverImage}
@@ -112,7 +109,6 @@ const VehicleDetails = () => {
               </div>
             </div>
 
-            {/* Details */}
             <div className="space-y-6">
               <div>
                 <h1 className="text-4xl font-bold text-secondary mb-4">

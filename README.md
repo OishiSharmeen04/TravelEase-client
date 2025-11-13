@@ -1,16 +1,21 @@
-# React + Vite
+# Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TravelEase is a full-stack MERN vehicle booking platform that allows users to explore, add, update, and manage vehicles available for rent or travel.
+The app features Firebase Authentication, dynamic data fetching, and a modern responsive UI built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+This project demonstrates end-to-end full-stack development with secure API routes, user authentication, and a beautiful modern design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
 
-## React Compiler
+-   **Firebase Authentication** – Users can sign up, log in, and manage their bookings securely.
+-   **Vehicle Management** – Add, update, and delete vehicles you own directly from your dashboard.
+-   **Dynamic Exploration** – Browse all vehicles by categories (Sedan, SUV, Electric, Motorcycle, etc.).
+-   **Modern UI/UX** – Built with Tailwind CSS, Framer Motion animations, and Lucide icons for a sleek, professional design.
+-   **RESTful API Integration** – Express.js backend handles CRUD operations securely with JWT-protected routes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Live Site URL
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+

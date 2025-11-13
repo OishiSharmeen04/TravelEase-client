@@ -7,63 +7,58 @@
   name: "luxcar";
   default: true;
 
-  /* 🎨 Main colors */
+
   --color-primary: #F5A524;
   --color-secondary: #E5E5E5;
   --color-accent: #FEEBC8;
 
-  /* 🖤 Background & text */
+
   --color-base-100: #121212;
   --color-base-200: #1C1C1C;
   --color-base-300: #2A2A2A;
   --color-neutral: #E5E5E5;
 
-  /* 💬 Status colors */
+
   --color-info: #3ABFF8;
   --color-success: #36D399;
   --color-warning: #FBBD23;
   --color-error: #F87272;
-
-  /* 🌈 Optional extras */
-  --rounded-box: 1rem; /* card/button corner */
-  --animation-btn: 0.25s;
-}
-
-/* ===== Light Theme ===== */
-[data-theme="luxcar-light"] {
-  /* 🎨 Main colors */
-  --color-primary: #F5A524;       /* Buttons, highlights, headings */
-  --color-secondary: #1E1E1E;     /* Secondary elements, badges (dark text for contrast) */
-  --color-accent: #FEEBC8;        /* Accent highlights */
-
-  /* 🏳️ Background & text */
-  --color-base-100: #F5F5DC;      /* Main page/card background - Beige */
-  --color-base-200: #FAF9F0;      /* Card surfaces - lighter beige */
-  --color-base-300: #FFF9E6;      /* Smaller surfaces / hover bg - very light beige */
-  --color-neutral: #1E1E1E;       /* Default text color - dark for contrast */
-  --color-gray-400: #4B5563;      /* Secondary text color - grayish dark */
-
-  /* 💬 Status colors */
-  --color-info: #3B82F6;          /* Blue info */
-  --color-success: #16A34A;       /* Green success */
-  --color-warning: #FBBF24;       /* Yellow warning */
-  --color-error: #EF4444;         /* Red error */
-
-  /* 🌈 Extras */
+  
   --rounded-box: 1rem;
   --animation-btn: 0.25s;
 }
 
 
+[data-theme="luxcar-light"] {
 
-/* Buttons hover effect */
+  --color-primary: #F5A524;       
+  --color-secondary: #1E1E1E;     
+  --color-accent: #FEEBC8;        
+
+
+  --color-base-100: #F5F5DC;      
+  --color-base-200: #FAF9F0;      
+  --color-base-300: #FFF9E6;      
+  --color-neutral: #1E1E1E;       
+  --color-gray-400: #4B5563;      
+
+  
+  --color-info: #3B82F6;          
+  --color-success: #16A34A;       
+  --color-warning: #FBBF24;       
+  --color-error: #EF4444;         
+
+  
+  --rounded-box: 1rem;
+  --animation-btn: 0.25s;
+}
+
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 0 20px rgba(245, 165, 36, 0.6);
   transition: all 0.25s ease-in-out;
 }
 
-/* Fonts */
 * {
   font-family: "Orbitron", sans-serif;
 }

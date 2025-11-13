@@ -31,26 +31,22 @@ const AllVehicles = () => {
   useEffect(() => {
     let filtered = [...vehicles];
 
-    // Filter by search (vehicle name)
     if (filters.search) {
       filtered = filtered.filter(v => 
         v.vehicleName.toLowerCase().includes(filters.search.toLowerCase())
       );
     }
 
-    // Filter by category
     if (filters.category) {
       filtered = filtered.filter(v => v.category === filters.category);
     }
 
-    // Filter by location
     if (filters.location) {
       filtered = filtered.filter(v => 
         v.location.toLowerCase().includes(filters.location.toLowerCase())
       );
     }
 
-    // Sort
     if (filters.sortBy === 'price-low') {
       filtered.sort((a, b) => a.pricePerDay - b.pricePerDay);
     } else if (filters.sortBy === 'price-high') {
@@ -95,10 +91,8 @@ const AllVehicles = () => {
             All <span className="text-primary">Vehicles</span>
           </h1>
 
-          {/* Filters */}
           <div className="card p-6 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              {/* Search Input */}
               <div>
                 <label className="block text-sm font-medium mb-2 text-neutral">
                   Search Vehicle
@@ -183,14 +177,12 @@ const AllVehicles = () => {
             </div>
           </div>
 
-          {/* Results Count */}
           <div className="mb-6">
             <p className='text-neutral/80'>
               Showing <span className="text-primary font-semibold">{filteredVehicles.length}</span> vehicles
             </p>
           </div>
 
-          {/* Vehicles Grid */}
           {filteredVehicles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredVehicles.map(vehicle => (

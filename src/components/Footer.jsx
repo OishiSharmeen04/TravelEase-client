@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-dark-800 border-t border-dark-700 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {/* Brand */}
+        
           <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-3 sm:mb-4">
               <div className="text-xl sm:text-2xl font-bold">
@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+
           <div>
             <h3 className="text-secondary font-semibold mb-3 sm:mb-4 text-base sm:text-lg">
               Quick Links
@@ -114,7 +114,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="text-secondary font-semibold mb-3 sm:mb-4 text-base sm:text-lg">
               Contact
@@ -147,7 +146,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+
         <div className="border-t border-dark-700 mt-6 sm:mt-8 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">

@@ -11,7 +11,7 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleLogout = () => {
-    setShowDropdown(false); // close dropdown when logging out
+    setShowDropdown(false);
     logout()
       .then(() => toast.success("Logged out successfully!"))
       .catch((error) => toast.error(error.message));
@@ -94,7 +94,6 @@ const Navbar = () => {
     <nav className="glass border-b border-white/10 sticky top-0 z-50 backdrop-blur-custom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img
               src={logo}
@@ -108,13 +107,10 @@ const Navbar = () => {
               </span>
             </span>
           </Link>
-
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navLinks}
           </div>
 
-          {/* Auth Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <ThemeToggle />
 
@@ -174,7 +170,6 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Mobile & Tablet Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden text-gray-300 hover:text-primary transition-colors"
@@ -204,7 +199,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* ✅ Mobile & Tablet Dropdown Menu */}
         {isMenuOpen && (
           <div
             className="lg:hidden mt-2 mb-4 bg-base-200 text-neutral border border-base-300 
@@ -213,16 +207,11 @@ const Navbar = () => {
             <div className="flex flex-col divide-y divide-base-300">
               {user ? (
                 <>
-                  {/* Nav Links */}
                   <div className="flex flex-col">{navLinks}</div>
-
-                  {/* Theme Toggle */}
                   <div className="px-4 py-3 flex items-center justify-between">
                     <span className="text-sm font-medium text-secondary">Theme</span>
                     <ThemeToggle />
                   </div>
-
-                  {/* User Info */}
                   <div className="px-4 py-3 border-t border-base-300 bg-base-100/50 rounded-b-xl">
                     <div className="flex items-center space-x-3">
                       <img
@@ -250,16 +239,11 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  {/* Nav Links */}
                   <div className="flex flex-col">{navLinks}</div>
-
-                  {/* Theme Toggle */}
                   <div className="px-4 py-3 flex items-center justify-between">
                     <span className="text-sm font-medium text-secondary">Theme</span>
                     <ThemeToggle />
                   </div>
-
-                  {/* Guest Links */}
                   <div className="flex flex-col px-4 py-2 space-y-2">
                     <Link
                       to="/login"

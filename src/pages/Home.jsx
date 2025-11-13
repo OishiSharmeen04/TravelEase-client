@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/vehicles/latest")
+      .get("https://travelease-server-roan.vercel.app/vehicles/latest")
       .then((res) => {
         setLatestVehicles(res.data);
         setLoading(false);
@@ -48,7 +48,6 @@ const Home = () => {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[600px] flex items-center justify-center overflow-hidden">
-
         {latestVehicles.length > 0 && (
           <AnimatePresence mode="wait">
             <motion.div

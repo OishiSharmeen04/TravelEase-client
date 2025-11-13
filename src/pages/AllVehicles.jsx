@@ -194,10 +194,10 @@ const AllVehicles = () => {
               <svg className="w-24 h-24 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <p style={{ color: 'rgb(var(--text-secondary))' }} className="text-lg">
+              <p className="text-lg text-secondary">
                 No vehicles found matching your criteria
               </p>
-              <button onClick={resetFilters} className="btn-primary mt-4">
+              <button onClick={resetFilters} className="btn btn-primary text-sm sm:text-base md:text-lg px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 inline-flex items-center gap-2 shadow-gold mt-5">
                 Clear All Filters
               </button>
             </div>

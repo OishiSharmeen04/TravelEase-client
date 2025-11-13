@@ -36,12 +36,12 @@ export const apiCall = async (endpoint, options = {}) => {
   }
 };
 
-// GET
+// get
 export const get = (endpoint) => {
   return apiCall(endpoint);
 };
 
-// POST
+// post
 export const post = (endpoint, data) => {
   return apiCall(endpoint, {
     method: 'POST',
@@ -49,7 +49,7 @@ export const post = (endpoint, data) => {
   });
 };
 
-// PUT
+// put
 export const put = (endpoint, data) => {
   return apiCall(endpoint, {
     method: 'PUT',
@@ -57,7 +57,7 @@ export const put = (endpoint, data) => {
   });
 };
 
-// DELETE
+// delete
 export const del = (endpoint) => {
   return apiCall(endpoint, {
     method: 'DELETE'
